@@ -8,4 +8,4 @@ def test_bar():
 def test_try_false():
     bar = Bar('test')
     bar.try_something_stupid()
-    assert True
+    assert False

@@ -30,16 +30,9 @@ async def test():
             .with_exec(["./.venv/bin/ruff", "."])
         )
         
-        another_python = (
-            client.container()
-            .from_("python:3.10")
-            .with_exec(["ls", "-a"])
-        )
         out = await python.stdout()
         print(out)
 
-        out2 = await another_python.stdout()
-        print(out2)
         # python = (
         #     client.container()
         #     # pull container
