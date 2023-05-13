@@ -23,7 +23,10 @@ jobs:
     - name: Install dagger
       run: |
         pip install dagger-io==0.5.3
+        cd /usr/local
+        curl -L https://dl.dagger.io/dagger/install.sh | sh
+        export _EXPERIMENTAL_DAGGER_TUI=yep
         
     - name: Run dagger pipeline
       run: |
-        python ci/main.py
+        dagger run python ci/main.py

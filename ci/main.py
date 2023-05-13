@@ -13,7 +13,7 @@ async def test():
 
         # first stage
         python = (
-            client.container()
+            client.pipeline("test").container()
             .from_("python:3.10-slim")
             .with_exec(["apt", "update"])
             .with_exec(["apt", "install", "curl", "-y"])
