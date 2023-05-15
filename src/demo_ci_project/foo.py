@@ -5,8 +5,8 @@ class Bar:
     def try_something_stupid(self):
         try:
             print(self.name)
-        except ValueError as e:
-            print(e)
-        #except:
-        #    pass
+        # except ValueError as e:
+        #     print(e)
+        except:
+           pass
     
